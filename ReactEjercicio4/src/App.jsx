@@ -1,16 +1,15 @@
-import { useState } from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-import './App.css'
-import Input from './components/Input'
+import "./App.css";
+import FormularioTareas from "./components/FormularioTareas";
 
 function App() {
-
-
   return (
     <>
-    <Input></Input>
+      <FormularioTareas></FormularioTareas>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
