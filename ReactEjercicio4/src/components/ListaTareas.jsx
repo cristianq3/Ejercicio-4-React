@@ -8,7 +8,6 @@ function ListaTareas() {
    <ItemTarea tarea="Comprar los alimentos para la cena"></ItemTarea>
    <ItemTarea tarea="Peinar al Gato"></ItemTarea>
    <ItemTarea tarea="Regar las plantas"></ItemTarea>
-
     </ListGroup>
   );
 }

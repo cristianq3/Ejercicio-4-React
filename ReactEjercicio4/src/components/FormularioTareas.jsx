@@ -9,7 +9,7 @@ function Input() {
     <Form>
       <Form.Group className="mb-3 d-flex" controlId="tarea">
         <Form.Control type="text" placeholder="Ingrese la tarea" />
-        <Button variant="primary" className="ms-2" type="submit">
+        <Button variant="warning" className="ms-2" type="submit">
         <i className="bi bi-plus"></i>
         </Button>
       </Form.Group>
