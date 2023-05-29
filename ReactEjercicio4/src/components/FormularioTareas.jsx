@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import ListaTareas from "./ListaTareas";
+import { useState } from "react";
 
 function Input() {
   return (
@@ -14,7 +15,6 @@ function Input() {
         </Button>
       </Form.Group>
     </Form>
-
     <ListaTareas></ListaTareas>
     </section>
   );
