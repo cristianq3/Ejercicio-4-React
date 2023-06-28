@@ -1,15 +1,19 @@
-import ListGroup from 'react-bootstrap/ListGroup';
-import ItemTarea from './ItemTarea';
+import ListGroup from "react-bootstrap/ListGroup";
+import ItemTarea from "./ItemTarea";
 
-function ListaTareas() {
+
+const ListaTareas = ({ tareas, borrarTarea }) => {
   return (
     <ListGroup>
-   <ItemTarea tarea="Cambiar el aceite al auto"></ItemTarea>
-   <ItemTarea tarea="Comprar los alimentos para la cena"></ItemTarea>
-   <ItemTarea tarea="Peinar al Gato"></ItemTarea>
-   <ItemTarea tarea="Regar las plantas"></ItemTarea>
+      {tareas.map((tarea, indiceTarea) => (
+        <ItemTarea
+          tarea={tarea}
+          key={indiceTarea}
+          borrarTarea={borrarTarea}
+        ></ItemTarea>
+      ))}
     </ListGroup>
   );
-}
+};
 
 export default ListaTareas;

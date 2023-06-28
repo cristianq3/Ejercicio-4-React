@@ -4,13 +4,20 @@ import ListaTareas from "./ListaTareas";
 import { useState } from "react";
 
 function FormularioTarea() {
+  
   const [tarea, setTarea] = useState("");
   const [tareas, setTareas] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setTareas([...tareas, tarea]);
     setTarea("");
+  };
+
+  const borrarTarea = (nombreTarea) => {
+    //el filter devuelve un array con todas las coincidencias que tengan el nombre tarea
+    let copiaDeTareas = tareas.filter((itemTarea) => itemTarea !== nombreTarea);
     
+    setTareas = copiaDeTareas;
   };
 
   return (
@@ -29,7 +36,7 @@ function FormularioTarea() {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas></ListaTareas>
+      <ListaTareas tareas={tareas} borrarTarea={borrarTarea}></ListaTareas>
     </section>
   );
 }
